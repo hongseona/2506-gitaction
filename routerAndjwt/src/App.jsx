@@ -20,11 +20,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           {/* ProtectedRoute  컴포넌트를 이용하여 로그인이 필요한 자식 컴포넌트를 보호. */}
           <Route
-            path="/boardlist"
+            path="/boardList"
             element={
-              <PublicRoute>
+              <ProtectedRoute>
                 <BoardList />
-              </PublicRoute>
+              </ProtectedRoute>
             }
           />
           <Route
