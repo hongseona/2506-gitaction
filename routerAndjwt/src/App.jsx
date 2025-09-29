@@ -22,9 +22,9 @@ const App = () => {
           <Route
             path="/boardlist"
             element={
-              <ProtectedRoute>
+              <PublicRoute>
                 <BoardList />
-              </ProtectedRoute>
+              </PublicRoute>
             }
           />
           <Route
@@ -49,7 +49,7 @@ const App = () => {
         <Route 
           path="/login"
           element={
-            <PublicRoute>
+            <PublicRoute>   {/* 로그인 안해도 됨 */}
             <Login />
             </PublicRoute>
           }
